@@ -11,13 +11,11 @@ $(document).ready(function() {
 	function calculate() {
 	        
 	        var servings   = $('#servings').val();
-	        var ingredient    = $('.ingredient');
+	        var ingredient = parseFloat($('.ingredient').html());
 	        
 	        ingredient.each(function() {
-	                
-	                var amount = $(this);
 
-					newAmount = servings * amount;
+					newAmount = servings * ingredient;
 	                
 	        }); // end of loop
 	 		
