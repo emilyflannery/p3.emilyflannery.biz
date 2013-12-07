@@ -17,12 +17,6 @@
 <img id="logo" src="/images/foodshare.png" />
 
 <section class="content member">
-	<h2>
-		Welcome!
-	</h2>
-	<p id="welcome">
-		What will you bring to the table today?
-	</p>
 
 	<h3>
 		Green Bean Casserole Redux 
