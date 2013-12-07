@@ -9,12 +9,12 @@ $(document).ready(function() {
 	
 	// Calculate New Amount
 	function calculate() {
-		
-		var amount = $(this).html(); // .25
-	    var newAmount = parseFloat(amount) * parseFloat(servings); // 1 = .25 * 4
-		var originalAmount = newAmount / parseFloat(servings); // .25 = 1 / 4  
 
 		ingredient.each(function() {
+
+			var amount = $(this).html(); // .25
+		    var newAmount = parseFloat(amount) * parseFloat(servings); // 1 = .25 * 4
+			var originalAmount = newAmount / parseFloat(servings); // .25 = 1 / 4  
 
 	        $(this).html(originalAmount * parseFloat(servings)); // .25 * 1 = 1
 
