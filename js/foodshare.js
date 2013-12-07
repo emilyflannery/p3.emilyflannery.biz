@@ -1,26 +1,27 @@
 $(document).ready(function() {  
 
-
+    // Perform calculation
 	$('button').click(calculate);
 	$('.ingredient').change(calculate);
                 
-
-	/*-------------------------------------------------------------------------------------------------
-
-	-------------------------------------------------------------------------------------------------*/
+	var servings = $('#servings').val(); // 5
+	var ingredient = $('.ingredient'); // .25 
+	
+	// Calculate New Amount
 	function calculate() {
-	        
-	        var servings   = $('#servings').val();
-	        var ingredient = parseFloat($('.ingredient').html());
-	        
-	        ingredient.each(function() {
+		
+		var amount = $(this).html(); // .25
+	    var newAmount = parseFloat(amount) * parseFloat(servings); // 1 = .25 * 4
+		var originalAmount = newAmount / parseFloat(servings); // .25 = 1 / 4  
 
-					newAmount = servings * ingredient;
-	                
-	        }); // end of loop
-	 		
-	 		$('.ingredient').html(newAmount);
+		ingredient.each(function() {
 
-	}
+	        $(this).html(originalAmount * parseFloat(servings)); // .25 * 1 = 1
+
+	    }); // end of loop
+	};
+
 
 }); //EOC
+
+
